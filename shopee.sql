@@ -1,187 +1,169 @@
--- Tabel studio
-CREATE TABLE studio (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nama_std VARCHAR(30) NOT NULL,
-    alamat VARCHAR(64) DEFAULT NULL,
-    host VARCHAR(64) DEFAULT NULL
-);
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 13 Okt 2024 pada 14.41
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.0.30
 
-INSERT INTO `studio` (`id`, `nama_std`, `alamat`, `host`) VALUES
-(1, 'Studio 1', 'Purbolinggo, Lampung Timur', 'Nadya Stefani, Nia Arista, Ela Nuraini, Kholis'),
-(5, 'Studio 2', 'Purbolinggo, Lampung Timur', 'Nadya Stefani, Nia Arista, Ela Nuraini'),
-(6, 'Studio 3', 'Purbolinggo, Lampung Timur', 'Nadya, Nia, Ela, Kholis, Nanda');
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
--- Tabel users
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    level ENUM('Admin', 'User') DEFAULT 'User',
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
 
-INSERT INTO `users` (`username`, `email`, `password`, `level`) VALUES
-('irulamin.id', 'me@mail.com', '$2a$12$phYY.oaDLEcFRfniCsBIMOBo0dVYmkS0Wn9hzo0z1kv1fnm7whyvC', 'Admin');
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
--- Tabel shopee_datacenter
-CREATE TABLE shopee_datacenter (
-    kode_akun VARCHAR(30) NOT NULL PRIMARY KEY,
-    email VARCHAR(30) NOT NULL,
-    password VARCHAR(30) NULL,
-    username VARCHAR(255) NOT NULL UNIQUE,
-    password_akun VARCHAR(30) NOT NULL,
-    status VARCHAR(30) NULL,
-    data_pembayaran VARCHAR(30) NULL,
-    NIK VARCHAR(30) NULL,
-    namaid VARCHAR(30) NULL,
-    bank VARCHAR(30) NULL,
-    rekening VARCHAR(30) NULL,
-    shopeepay VARCHAR(30) NULL,
-    keterangan VARCHAR(64) NULL,
-    studio_id INT DEFAULT NULL,
-    FOREIGN KEY (studio_id) REFERENCES studio(id) 
-    ON UPDATE CASCADE 
-    ON DELETE SET NULL
-);
+--
+-- Database: `shopee`
+--
 
-INSERT INTO `shopee_datacenter` (`kode_akun`, `email`, `password`, `username`, `password_akun`, `status`, `data_pembayaran`, `NIK`, `namaid`, `bank`, `rekening`, `shopeepay`, `keterangan`) 
-VALUES 
-('SHP001', 'modalnikah14@usaqo.com', '', 'stefany.collections', '', 'Nonaktif', '4', '', 'PANJI SASTRAWAN', 'BNI', '39028302830923', '', '088277547215'),
-('SHP0017', 'irulamin.project@gmail.com', '', 'stefhiuhoi', '', 'Dibatasi', 'Kosong', '', 'PANJI SASTRAWAN', '', '', '', '');
+-- --------------------------------------------------------
 
--- Tabel komisi
-CREATE TABLE komisi (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(255) NOT NULL,
-    waktu_komisi_dibayarkan DATE,
-    periode_validasi DATE,
-    total_komisi DECIMAL(20,2),
-    metode_pembayaran VARCHAR(50),
-    status_pembayaran VARCHAR(50),
-    waktu_pembayaran DATE,
-    FOREIGN KEY (username) REFERENCES shopee_datacenter(username) 
-    ON UPDATE CASCADE 
-    ON DELETE CASCADE
-);
+--
+-- Struktur dari tabel `komisi`
+--
 
-INSERT INTO `komisi` (`username`, `waktu_komisi_dibayarkan`, `periode_validasi`, `total_komisi`, `metode_pembayaran`, `status_pembayaran`, `waktu_pembayaran`) VALUES
-('stefany.collections', NULL, '2024-08-04', 190720.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
-('stefany.collections', NULL, '2024-08-03', 224444.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
-('stefany.collections', NULL, '2024-08-02', 239498.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
-('stefany.collections', NULL, '2024-08-01', 174364.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
-('stefany.collections', NULL, '2024-07-31', 100497.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
-('stefany.collections', NULL, '2024-07-30', 53304.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
-('stefany.collections', '2024-08-02', '2024-07-29', 28215.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
-('stefany.collections', '2024-08-02', '2024-07-28', 50577.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
-('stefany.collections', '2024-08-02', '2024-07-27', 1974.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
-('stefany.collections', '2024-07-24', '2024-06-28', 5235.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-27', 3342.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-26', 11040.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-25', 937.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-24', 12283.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-23', 9332.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-09', 12493.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-08', 450.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-07', 4162.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-06', 13156.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-05', 18356.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-04', 50004.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-03', 24911.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-02', 29317.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-06-01', 63510.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-05-31', 16764.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-05-30', 7133.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefany.collections', '2024-07-24', '2024-05-29', 4117.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', NULL, '2024-08-04', 190720.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
-('stefhiuhoi', NULL, '2024-08-03', 224444.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
-('stefhiuhoi', NULL, '2024-08-02', 239498.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
-('stefhiuhoi', NULL, '2024-08-01', 174364.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
-('stefhiuhoi', NULL, '2024-07-31', 100497.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
-('stefhiuhoi', NULL, '2024-07-30', 53304.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
-('stefhiuhoi', '2024-08-02', '2024-07-29', 28215.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
-('stefhiuhoi', '2024-08-02', '2024-07-28', 50577.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
-('stefhiuhoi', '2024-08-02', '2024-07-27', 1974.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
-('stefhiuhoi', '2024-07-24', '2024-06-28', 5235.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-27', 3342.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-26', 11040.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-25', 937.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-24', 12283.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-23', 9332.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-09', 12493.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-08', 450.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-07', 4162.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-06', 13156.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-05', 18356.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-04', 50004.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-03', 24911.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-02', 29317.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-06-01', 63510.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-05-31', 16764.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-05-30', 7133.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', '2024-07-24', '2024-05-29', 4117.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
-('stefhiuhoi', NULL, '2024-08-06', 190720.00, 'Unknown', 'Dibayarkan', NULL),
-('stefhiuhoi', NULL, '2024-08-05', 190720.00, 'Unknown', 'Dibayarkan', NULL);
+CREATE TABLE `komisi` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `waktu_komisi_dibayarkan` date DEFAULT NULL,
+  `periode_validasi` date DEFAULT NULL,
+  `total_komisi` decimal(20,2) DEFAULT NULL,
+  `metode_pembayaran` varchar(50) DEFAULT NULL,
+  `status_pembayaran` varchar(50) DEFAULT NULL,
+  `waktu_pembayaran` date DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Tabel penjualan
-CREATE TABLE penjualan (
-    order_id VARCHAR(255) NOT NULL PRIMARY KEY,
-    order_status VARCHAR(50),
-    conversion_id VARCHAR(255),
-    order_time DATETIME,
-    complete_time DATETIME,
-    click_time DATETIME,
-    shop_name VARCHAR(255),
-    shop_id INT,
-    shop_type VARCHAR(50),
-    item_id INT,
-    item_name VARCHAR(255),
-    model_id VARCHAR(255),
-    product_type VARCHAR(50),
-    promotion_id VARCHAR(255),
-    l1_global_category VARCHAR(255),
-    l2_global_category VARCHAR(255),
-    l3_global_category VARCHAR(255),
-    price_rp DECIMAL(15,2),
-    qty INT,
-    seller_campaign_type VARCHAR(50),
-    campaign_partner VARCHAR(255),
-    purchase_value_rp DECIMAL(15,2),
-    refund_amount_rp DECIMAL(15,2),
-    item_shopee_commission_rate DECIMAL(5,2),
-    item_shopee_commission_rp DECIMAL(15,2),
-    item_seller_commission_rate DECIMAL(5,2),
-    item_seller_commission_rp DECIMAL(15,2),
-    item_total_commission_rp DECIMAL(15,2),
-    order_shopee_commission_rp DECIMAL(15,2),
-    order_seller_commission_rp DECIMAL(15,2),
-    total_order_commission_rp DECIMAL(15,2),
-    linked_mcn_name VARCHAR(255),
-    mcn_contract_id VARCHAR(255),
-    mcn_management_fee_rate DECIMAL(5,2),
-    mcn_management_fee_rp DECIMAL(15,2),
-    affiliate_agreement_fee_rate DECIMAL(5,2),
-    affiliate_net_commission_rp DECIMAL(15,2),
-    affiliate_item_status VARCHAR(50),
-    item_note TEXT,
-    attribution_type VARCHAR(50),
-    buyer_status VARCHAR(50),
-    tag_link1 VARCHAR(255),
-    tag_link2 VARCHAR(255),
-    tag_link3 VARCHAR(255),
-    tag_link4 VARCHAR(255),
-    tag_link5 VARCHAR(255),
-    channel VARCHAR(50),
-    username VARCHAR(255) NOT NULL,
-    clicks INT,
-    conversion INT,
-    sales DECIMAL(10,2),
-    revenue DECIMAL(10,2),
-    FOREIGN KEY (username) REFERENCES shopee_datacenter(username) 
-    ON UPDATE CASCADE 
-    ON DELETE CASCADE
-);
+--
+-- Dumping data untuk tabel `komisi`
+--
+
+INSERT INTO `komisi` (`id`, `username`, `waktu_komisi_dibayarkan`, `periode_validasi`, `total_komisi`, `metode_pembayaran`, `status_pembayaran`, `waktu_pembayaran`) VALUES
+(1, 'stefany.collections', NULL, '2024-08-04', 190720.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
+(2, 'stefany.collections', NULL, '2024-08-03', 224444.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
+(3, 'stefany.collections', NULL, '2024-08-02', 239498.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
+(4, 'stefany.collections', NULL, '2024-08-01', 174364.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
+(5, 'stefany.collections', NULL, '2024-07-31', 100497.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
+(6, 'stefany.collections', NULL, '2024-07-30', 53304.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
+(7, 'stefany.collections', '2024-08-02', '2024-07-29', 28215.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
+(8, 'stefany.collections', '2024-08-02', '2024-07-28', 50577.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
+(9, 'stefany.collections', '2024-08-02', '2024-07-27', 1974.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
+(10, 'stefany.collections', '2024-07-24', '2024-06-28', 5235.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(11, 'stefany.collections', '2024-07-24', '2024-06-27', 3342.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(12, 'stefany.collections', '2024-07-24', '2024-06-26', 11040.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(13, 'stefany.collections', '2024-07-24', '2024-06-25', 937.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(14, 'stefany.collections', '2024-07-24', '2024-06-24', 12283.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(15, 'stefany.collections', '2024-07-24', '2024-06-23', 9332.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(16, 'stefany.collections', '2024-07-24', '2024-06-09', 12493.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(17, 'stefany.collections', '2024-07-24', '2024-06-08', 450.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(18, 'stefany.collections', '2024-07-24', '2024-06-07', 4162.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(19, 'stefany.collections', '2024-07-24', '2024-06-06', 13156.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(20, 'stefany.collections', '2024-07-24', '2024-06-05', 18356.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(21, 'stefany.collections', '2024-07-24', '2024-06-04', 50004.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(22, 'stefany.collections', '2024-07-24', '2024-06-03', 24911.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(23, 'stefany.collections', '2024-07-24', '2024-06-02', 29317.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(24, 'stefany.collections', '2024-07-24', '2024-06-01', 63510.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(25, 'stefany.collections', '2024-07-24', '2024-05-31', 16764.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(26, 'stefany.collections', '2024-07-24', '2024-05-30', 7133.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(27, 'stefany.collections', '2024-07-24', '2024-05-29', 4117.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(28, 'stefhiuhoi', NULL, '2024-08-04', 190720.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
+(29, 'stefhiuhoi', NULL, '2024-08-03', 224444.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
+(30, 'stefhiuhoi', NULL, '2024-08-02', 239498.00, 'Tidak disebutkan', 'Sedang Divalidasi', NULL),
+(31, 'stefhiuhoi', NULL, '2024-08-01', 174364.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
+(32, 'stefhiuhoi', NULL, '2024-07-31', 100497.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
+(33, 'stefhiuhoi', NULL, '2024-07-30', 53304.00, 'ShopeePay', 'Menunggu Dibayar', NULL),
+(34, 'stefhiuhoi', '2024-08-02', '2024-07-29', 28215.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
+(35, 'stefhiuhoi', '2024-08-02', '2024-07-28', 50577.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
+(36, 'stefhiuhoi', '2024-08-02', '2024-07-27', 1974.00, 'ShopeePay', 'Dibayarkan', '2024-08-02'),
+(37, 'stefhiuhoi', '2024-07-24', '2024-06-28', 5235.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(38, 'stefhiuhoi', '2024-07-24', '2024-06-27', 3342.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(39, 'stefhiuhoi', '2024-07-24', '2024-06-26', 11040.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(40, 'stefhiuhoi', '2024-07-24', '2024-06-25', 937.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(41, 'stefhiuhoi', '2024-07-24', '2024-06-24', 12283.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(42, 'stefhiuhoi', '2024-07-24', '2024-06-23', 9332.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(43, 'stefhiuhoi', '2024-07-24', '2024-06-09', 12493.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(44, 'stefhiuhoi', '2024-07-24', '2024-06-08', 450.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(45, 'stefhiuhoi', '2024-07-24', '2024-06-07', 4162.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(46, 'stefhiuhoi', '2024-07-24', '2024-06-06', 13156.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(47, 'stefhiuhoi', '2024-07-24', '2024-06-05', 18356.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(48, 'stefhiuhoi', '2024-07-24', '2024-06-04', 50004.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(49, 'stefhiuhoi', '2024-07-24', '2024-06-03', 24911.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(50, 'stefhiuhoi', '2024-07-24', '2024-06-02', 29317.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(51, 'stefhiuhoi', '2024-07-24', '2024-06-01', 63510.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(52, 'stefhiuhoi', '2024-07-24', '2024-05-31', 16764.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(53, 'stefhiuhoi', '2024-07-24', '2024-05-30', 7133.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(54, 'stefhiuhoi', '2024-07-24', '2024-05-29', 4117.00, 'Transfer Bank', 'Dibayarkan', '2024-07-24'),
+(55, 'stefhiuhoi', NULL, '2024-08-06', 190720.00, 'Unknown', 'Dibayarkan', NULL),
+(56, 'stefhiuhoi', NULL, '2024-08-05', 190720.00, 'Unknown', 'Dibayarkan', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `penjualan`
+--
+
+CREATE TABLE `penjualan` (
+  `order_id` varchar(255) NOT NULL,
+  `order_status` varchar(50) DEFAULT NULL,
+  `conversion_id` varchar(255) DEFAULT NULL,
+  `order_time` datetime DEFAULT NULL,
+  `complete_time` datetime DEFAULT NULL,
+  `click_time` datetime DEFAULT NULL,
+  `shop_name` varchar(255) DEFAULT NULL,
+  `shop_id` int(11) DEFAULT NULL,
+  `shop_type` varchar(50) DEFAULT NULL,
+  `item_id` int(11) DEFAULT NULL,
+  `item_name` varchar(255) DEFAULT NULL,
+  `model_id` varchar(255) DEFAULT NULL,
+  `product_type` varchar(50) DEFAULT NULL,
+  `promotion_id` varchar(255) DEFAULT NULL,
+  `l1_global_category` varchar(255) DEFAULT NULL,
+  `l2_global_category` varchar(255) DEFAULT NULL,
+  `l3_global_category` varchar(255) DEFAULT NULL,
+  `price_rp` decimal(15,2) DEFAULT NULL,
+  `qty` int(11) DEFAULT NULL,
+  `seller_campaign_type` varchar(50) DEFAULT NULL,
+  `campaign_partner` varchar(255) DEFAULT NULL,
+  `purchase_value_rp` decimal(15,2) DEFAULT NULL,
+  `refund_amount_rp` decimal(15,2) DEFAULT NULL,
+  `item_shopee_commission_rate` decimal(5,2) DEFAULT NULL,
+  `item_shopee_commission_rp` decimal(15,2) DEFAULT NULL,
+  `item_seller_commission_rate` decimal(5,2) DEFAULT NULL,
+  `item_seller_commission_rp` decimal(15,2) DEFAULT NULL,
+  `item_total_commission_rp` decimal(15,2) DEFAULT NULL,
+  `order_shopee_commission_rp` decimal(15,2) DEFAULT NULL,
+  `order_seller_commission_rp` decimal(15,2) DEFAULT NULL,
+  `total_order_commission_rp` decimal(15,2) DEFAULT NULL,
+  `linked_mcn_name` varchar(255) DEFAULT NULL,
+  `mcn_contract_id` varchar(255) DEFAULT NULL,
+  `mcn_management_fee_rate` decimal(5,2) DEFAULT NULL,
+  `mcn_management_fee_rp` decimal(15,2) DEFAULT NULL,
+  `affiliate_agreement_fee_rate` decimal(5,2) DEFAULT NULL,
+  `affiliate_net_commission_rp` decimal(15,2) DEFAULT NULL,
+  `affiliate_item_status` varchar(50) DEFAULT NULL,
+  `item_note` text DEFAULT NULL,
+  `attribution_type` varchar(50) DEFAULT NULL,
+  `buyer_status` varchar(50) DEFAULT NULL,
+  `tag_link1` varchar(255) DEFAULT NULL,
+  `tag_link2` varchar(255) DEFAULT NULL,
+  `tag_link3` varchar(255) DEFAULT NULL,
+  `tag_link4` varchar(255) DEFAULT NULL,
+  `tag_link5` varchar(255) DEFAULT NULL,
+  `channel` varchar(50) DEFAULT NULL,
+  `username` varchar(255) NOT NULL,
+  `clicks` int(11) DEFAULT NULL,
+  `conversion` int(11) DEFAULT NULL,
+  `sales` decimal(10,2) DEFAULT NULL,
+  `revenue` decimal(10,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `penjualan`
+--
 
 INSERT INTO `penjualan` (`order_id`, `order_status`, `conversion_id`, `order_time`, `complete_time`, `click_time`, `shop_name`, `shop_id`, `shop_type`, `item_id`, `item_name`, `model_id`, `product_type`, `promotion_id`, `l1_global_category`, `l2_global_category`, `l3_global_category`, `price_rp`, `qty`, `seller_campaign_type`, `campaign_partner`, `purchase_value_rp`, `refund_amount_rp`, `item_shopee_commission_rate`, `item_shopee_commission_rp`, `item_seller_commission_rate`, `item_seller_commission_rp`, `item_total_commission_rp`, `order_shopee_commission_rp`, `order_seller_commission_rp`, `total_order_commission_rp`, `linked_mcn_name`, `mcn_contract_id`, `mcn_management_fee_rate`, `mcn_management_fee_rp`, `affiliate_agreement_fee_rate`, `affiliate_net_commission_rp`, `affiliate_item_status`, `item_note`, `attribution_type`, `buyer_status`, `tag_link1`, `tag_link2`, `tag_link3`, `tag_link4`, `tag_link5`, `channel`, `username`, `clicks`, `conversion`, `sales`, `revenue`) VALUES
 ('240725FPF3CYPV', 'Cancelled', '175539525284586', '2024-07-24 23:58:46', '1970-01-01 01:00:00', '2024-07-24 23:59:34', 'Authentism Official Store', 68072145, 'Preferred(Non-CB)', 2147483647, 'AUTHENTISM ID Raline Basic Voal - Kerudung Segi Empat Polos Premium', '88083045032', 'Normal Product', '', 'Fashion Muslim', 'Pakaian Muslim Wanita', 'Hijab', 54720.00, 0, 'Seller Target Campaign', '', 0.00, 48153.00, 6.00, 0.00, 7.00, 0.00, 0.00, 0.00, 0.00, 0.00, '', '0', 0.00, 0.00, 100.00, 0.00, 'Cancelled', 'Order is invalid.', 'Ordered in Same Shop', 'Existing', '', '', '', '', '', 'Shopeelive-Shopee', 'stefany.collections', NULL, NULL, NULL, NULL),
@@ -433,3 +415,197 @@ INSERT INTO `penjualan` (`order_id`, `order_status`, `conversion_id`, `order_tim
 ('240803BJ4RD5Q1', 'Pending', '176397444292642', '2024-08-03 22:17:24', '1970-01-01 01:00:00', '2024-08-03 22:16:46', 'ALTALITA OFFICIAL', 473293069, 'Preferred(Non-CB)', 2147483647, 'Altalita - Kerudung Sporty Nadira Hamidah Instan All Size Ukuran S M L Menutup Dada pet Antem Bahan Jersey Premium Cocok untuk S', '98937147178', 'Normal Product', '', 'Fashion Muslim', 'Pakaian Muslim Wanita', 'Hijab', 11499.00, 1, 'Seller Open Campaign', '', 11499.00, 0.00, 6.00, 689.94, 9.00, 1034.91, 1724.85, 689.94, 1034.91, 1724.85, '', '0', 0.00, 0.00, 100.00, 1724.85, 'Pending', 'The status of the Item is pending, commissions will only be paid when it’s completed', 'Ordered in Same Shop', 'Existing', '', '', '', '', '', 'Shopeelive-Shopee', 'stefany.collections', NULL, NULL, NULL, NULL),
 ('240803BJAFFG2W', 'Pending', '176397636250346', '2024-08-03 22:20:36', '1970-01-01 01:00:00', '2024-08-03 22:16:02', 'mekahijab', 6353148, 'Preferred(Non-CB)', 2147483647, 'Ciput/ inner turki (renda bnyak)', '4949917824', 'Normal Product', '', 'Fashion Muslim', 'Pakaian Muslim Wanita', 'Hijab', 10400.00, 1, 'Seller Target Campaign', '', 10400.00, 0.00, 6.00, 624.00, 6.00, 624.00, 1248.00, 624.00, 624.00, 1248.00, '', '0', 0.00, 0.00, 100.00, 1248.00, 'Pending', 'The status of the Item is pending, commissions will only be paid when it’s completed', 'Ordered in Same Shop', 'Existing', '', '', '', '', '', 'Shopeelive-Shopee', 'stefany.collections', NULL, NULL, NULL, NULL),
 ('240803BKKAYJMS', 'Pending', '176399007271344', '2024-08-03 22:43:27', '1970-01-01 01:00:00', '2024-08-03 22:39:27', 'Nshijabgroup', 163079898, 'Preferred(Non-CB)', 2147483647, '( PET STANDAR ) Jilbab Khimar Jersey Premium Pet Antem / Jilbab instan', '68964596871', 'Normal Product', '0_185538888077348_1', 'Fashion Muslim', 'Pakaian Muslim Wanita', 'Hijab', 29950.00, 1, 'Seller Open Campaign', '', 24950.00, 0.00, 6.00, 1497.00, 10.00, 2495.00, 3992.00, 0.00, 0.00, 0.00, '', '0', 0.00, 0.00, 100.00, 0.00, 'Pending', 'The status of the Item is pending, commissions will only be paid when it’s completed', 'Ordered in Same Shop', 'Existing', '', '', '', '', '', '', 'stefany.collections', NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `shopee_datacenter`
+--
+
+CREATE TABLE `shopee_datacenter` (
+  `kode_akun` varchar(30) NOT NULL,
+  `email` varchar(30) NOT NULL,
+  `password` varchar(30) DEFAULT NULL,
+  `username` varchar(255) NOT NULL,
+  `password_akun` varchar(30) NOT NULL,
+  `status` varchar(30) DEFAULT NULL,
+  `data_pembayaran` varchar(30) DEFAULT NULL,
+  `NIK` varchar(30) DEFAULT NULL,
+  `namaid` varchar(30) DEFAULT NULL,
+  `bank` varchar(30) DEFAULT NULL,
+  `rekening` varchar(30) DEFAULT NULL,
+  `shopeepay` varchar(30) DEFAULT NULL,
+  `keterangan` varchar(64) DEFAULT NULL,
+  `studio_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `shopee_datacenter`
+--
+
+INSERT INTO `shopee_datacenter` (`kode_akun`, `email`, `password`, `username`, `password_akun`, `status`, `data_pembayaran`, `NIK`, `namaid`, `bank`, `rekening`, `shopeepay`, `keterangan`, `studio_id`) VALUES
+('SHP001', 'modalnikah14@usaqo.com', '', 'stefany.collections', '', 'Nonaktif', '4', '', 'PANJI SASTRAWAN', 'BNI', '39028302830923', '', '088277547215', NULL),
+('SHP0017', 'irulamin.project@gmail.com', '', 'stefhiuhoi', '', 'Dibatasi', 'Kosong', '', 'PANJI SASTRAWAN', '', '', '', '', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `studio`
+--
+
+CREATE TABLE `studio` (
+  `id` int(11) NOT NULL,
+  `nama_std` varchar(30) NOT NULL,
+  `alamat` varchar(64) DEFAULT NULL,
+  `host` varchar(64) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `studio`
+--
+
+INSERT INTO `studio` (`id`, `nama_std`, `alamat`, `host`) VALUES
+(1, 'Studio 1', 'Purbolinggo, Lampung Timur', 'Nadya Stefani, Nia Arista, Ela Nuraini, Kholis'),
+(5, 'Studio 2', 'Purbolinggo, Lampung Timur', 'Nadya Stefani, Nia Arista, Ela Nuraini'),
+(6, 'Studio 3', 'Purbolinggo, Lampung Timur', 'Nadya, Nia, Ela, Kholis, Nanda');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `target_bulanan`
+--
+
+CREATE TABLE `target_bulanan` (
+  `bulan` varchar(20) DEFAULT NULL,
+  `target` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `target_bulanan`
+--
+
+INSERT INTO `target_bulanan` (`bulan`, `target`) VALUES
+('Januari', 912979),
+('Februari', 978735),
+('Maret', 254738),
+('April', 937489),
+('Mei', 223225),
+('Juni', 903664),
+('Juli', 148642),
+('Agustus', 632221),
+('September', 815177),
+('Oktober', 279220),
+('November', 650574),
+('Desember', 515207);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `level` enum('Admin','User') DEFAULT 'User',
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `level`, `created_at`, `updated_at`) VALUES
+(1, 'irulamin.id', 'me@mail.com', '$2a$12$phYY.oaDLEcFRfniCsBIMOBo0dVYmkS0Wn9hzo0z1kv1fnm7whyvC', 'Admin', '2024-10-13 07:22:25', '2024-10-13 07:22:25');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indeks untuk tabel `komisi`
+--
+ALTER TABLE `komisi`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `username` (`username`);
+
+--
+-- Indeks untuk tabel `penjualan`
+--
+ALTER TABLE `penjualan`
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `username` (`username`);
+
+--
+-- Indeks untuk tabel `shopee_datacenter`
+--
+ALTER TABLE `shopee_datacenter`
+  ADD PRIMARY KEY (`kode_akun`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD KEY `studio_id` (`studio_id`);
+
+--
+-- Indeks untuk tabel `studio`
+--
+ALTER TABLE `studio`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
+--
+
+--
+-- AUTO_INCREMENT untuk tabel `komisi`
+--
+ALTER TABLE `komisi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- AUTO_INCREMENT untuk tabel `studio`
+--
+ALTER TABLE `studio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+--
+
+--
+-- Ketidakleluasaan untuk tabel `komisi`
+--
+ALTER TABLE `komisi`
+  ADD CONSTRAINT `komisi_ibfk_1` FOREIGN KEY (`username`) REFERENCES `shopee_datacenter` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `penjualan`
+--
+ALTER TABLE `penjualan`
+  ADD CONSTRAINT `penjualan_ibfk_1` FOREIGN KEY (`username`) REFERENCES `shopee_datacenter` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `shopee_datacenter`
+--
+ALTER TABLE `shopee_datacenter`
+  ADD CONSTRAINT `shopee_datacenter_ibfk_1` FOREIGN KEY (`studio_id`) REFERENCES `studio` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
