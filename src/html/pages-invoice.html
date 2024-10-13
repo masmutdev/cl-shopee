@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("partials/title-meta.html", {"title": "Invoice"})
+
+		@@include('./partials/head-css.html')
+
+    </head>
+
+    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html')
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Invoice</h4>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Shreyu</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+                                            <li class="breadcrumb-item active">Invoice</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title -->  
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <!-- Logo & title -->
+                                        <div class="clearfix">
+                                            <div class="float-sm-end">
+                                                <img src="assets/images/logo-dark.png" alt="" height="24" />
+                                                <address class="mt-2">
+                                                    795 Folsom Ave, Suite 600<br>
+                                                    San Francisco, CA 94107<br>
+                                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                </address>
+                                            </div>
+                                            <div class="float-sm-start">
+                                                <h4 class="m-0 d-print-none">Invoice</h4>
+                                                <dl class="row mb-2 mt-3">
+                                                    <dt class="col-sm-3 fw-normal">Invoice Number :</dt>
+                                                    <dd class="col-sm-9 fw-normal">#sh1001</dd>
+
+                                                    <dt class="col-sm-3 fw-normal">Invoice Date :</dt>
+                                                    <dd class="col-sm-9 fw-normal">Jul 17, 2019</dd>
+
+                                                    <dt class="col-sm-3 fw-normal">Due Date :</dt>
+                                                    <dd class="col-sm-9 fw-normal">Jul 27, 2019</dd>
+                                                </dl>
+                                            </div>
+                                            
+                                        </div>
+
+                                        <div class="row mt-4">
+                                            <div class="col-md-6">
+                                                <h6 class="fw-normal">Invoice For:</h6>
+                                                <h6 class="fs-16">Greeva Navadiya</h6>
+                                                <address>
+                                                    795 Folsom Ave, Suite 600<br>
+                                                    San Francisco, CA 94107<br>
+                                                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                                                </address>
+                                            </div> <!-- end col -->
+
+                                            <div class="col-md-6">
+                                                <div class="text-md-end">
+                                                    <h6 class="fw-normal">Total</h6>
+                                                    <h2>$4137.75</h2>
+                                                </div>
+                                            </div> <!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="table-responsive">
+                                                    <table class="table mt-4 table-centered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>Item</th>
+                                                                <th style="width: 10%">Hours</th>
+                                                                <th style="width: 10%">Hours Rate</th>
+                                                                <th style="width: 10%" class="text-end">Total</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    <h5 class="fs-16 mt-0 mb-2">Web Design</h5>
+                                                                    <p class="text-muted mb-0">2 Pages static website - my website</p>
+                                                                </td>
+                                                                <td>22</td>
+                                                                <td>$30</td>
+                                                                <td class="text-end">$660.00</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>
+                                                                    <h5 class="fs-16 mt-0 mb-2">Software Development</h5>
+                                                                    <p class="text-muted mb-0">Invoice editor software - AB'c Software</p>
+                                                                </td>
+                                                                <td>112.5</td>
+                                                                <td>$35</td>
+                                                                <td class="text-end">$3937.50</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div> <!-- end table-responsive -->
+                                            </div> <!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="clearfix pt-5">
+                                                    <h6 class="text-muted">Notes:</h6>
+
+                                                    <small class="text-muted">
+                                                        All accounts are to be paid within 7 days from receipt of
+                                                        invoice. To be paid by cheque or credit card or direct payment
+                                                        online. If account is not paid within 7 days the credits details
+                                                        supplied as confirmation of work undertaken will be charged the
+                                                        agreed quoted fee noted above.
+                                                    </small>
+                                                </div>
+                                            </div> <!-- end col -->
+                                            <div class="col-sm-6">
+                                                <div class="float-end mt-4">
+                                                    <p><span class="fw-medium">Sub-total :</span> 
+                                                        <span class="float-end">$4597.50</span>
+                                                    </p>
+                                                    <p><span class="fw-medium">Discount (10%) :</span> 
+                                                        <span class="float-end"> &nbsp;&nbsp;&nbsp; $459.75</span>
+                                                    </p>
+                                                    <h3>$4137.75 USD</h3>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </div> <!-- end col -->
+                                        </div>
+                                        <!-- end row -->
+
+                                        <div class="mt-5 mb-1">
+                                            <div class="text-end d-print-none">
+                                                <a href="javascript:window.print()" class="btn btn-primary">
+                                                    <i class="uil uil-print me-1"></i> Print</a>
+                                                <a href="#" class="btn btn-info">Submit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

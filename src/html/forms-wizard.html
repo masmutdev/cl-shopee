@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("partials/title-meta.html", {"title": "Wizard"})
+
+        <link rel="stylesheet" href="assets/libs/smartwizard/css/smart_wizard.min.css" type="text/css" />
+        <link rel="stylesheet" href="assets/libs/smartwizard/css/smart_wizard_theme_arrows.min.css" type="text/css" />
+        <link rel="stylesheet" href="assets/libs/smartwizard/css/smart_wizard_theme_circles.min.css" type="text/css" />
+        <link rel="stylesheet" href="assets/libs/smartwizard/css/smart_wizard_theme_dots.min.css" type="text/css" />
+
+		@@include('./partials/head-css.html')
+
+    </head>
+
+    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html')
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Forms Wizard</h4>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Shreyu</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                                            <li class="breadcrumb-item active">Wizard</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title -->  
+                        
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mt-0 mb-1">Default wizard</h4>
+                                        <p class="sub-header">Example of Default wizard</p>
+                                        <div id="smartwizard-default">
+                                            <ul>
+                                                <li><a href="#sw-default-step-1">Account<small class="d-block fw-normal">Step description</small></a></li>
+                                                <li><a href="#sw-default-step-2">Profile<small class="d-block fw-normal">Step description</small></a></li>
+                                                <li><a href="#sw-default-step-3">Finish<small class="d-block fw-normal">Step description</small></a></li>
+                                            </ul>
+                                            
+                                            <div class="p-3">
+                                                <div id="sw-default-step-1">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-default-userName">User name</label>
+                                                                <input type="text" class="form-control" id="sw-default-userName" placeholder="Enter User name...">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-default-password"> Password</label>
+                                                                <input type="password" id="sw-default-password" class="form-control" placeholder="Enter Password...">
+                                                            </div>                                                            
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-default-confirm">Re Password</label>
+                                                                <input type="password" id="sw-default-confirm" class="form-control" placeholder="Enter Re Password...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-default-step-2">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-default-first-name">First name</label>
+                                                                <input type="text" id="sw-default-first-name" class="form-control" placeholder="Enter First name...">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-default-last-name">Last name</label>
+                                                                <input type="text" id="sw-default-last-name" class="form-control" placeholder="Enter Last name...">
+                                                            </div>                                    
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-default-email">Email</label>
+                                                                <input type="email" id="sw-default-email" class="form-control" placeholder="Enter Email...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-default-step-3">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-center">
+                                                                <div class="mb-3">
+                                                                    <i class="uil uil-check-square text-success h2"></i>
+                                                                </div>
+                                                                <h3>Thank you !</h3>
+                                                                <p class="w-75 mb-2 mx-auto text-muted">
+                                                                    Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam mattis dictum aliquet.
+                                                                </p>
+                                                                <div class="mb-3">
+                                                                    <div class="form-check d-inline-block">
+                                                                        <input type="checkbox" class="form-check-input" id="sm-default-customCheck">
+                                                                        <label class="form-check-label" for="sm-default-customCheck">I agree with the Terms and Conditions</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mt-0 mb-1">Arrows in Header</h4>
+                                        <p class="sub-header">Example of arrows wizard</p>
+                                        <div id="smartwizard-arrows">
+                                            <ul>
+                                                <li><a href="#sw-arrows-step-1">Account<small class="d-block fw-normal">Step description</small></a></li>
+                                                <li><a href="#sw-arrows-step-2">Profile<small class="d-block fw-normal">Step description</small></a></li>
+                                                <li><a href="#sw-arrows-step-3">Finish<small class="d-block fw-normal">Step description</small></a></li>
+                                            </ul>
+                                            
+                                            <div class="p-3">
+                                                <div id="sw-arrows-step-1">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-arrows-userName">User name</label>
+                                                                <input type="text" class="form-control" id="sw-arrows-userName" placeholder="Enter User name...">
+
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-arrows-password"> Password</label>
+                                                                <input type="password" id="sw-arrows-password" class="form-control" placeholder="Enter Password...">
+                                                            </div>                                                            
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-arrows-confirm">Re Password</label>
+                                                                <input type="password" id="sw-arrows-confirm" class="form-control" placeholder="Enter Re Password...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-arrows-step-2">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-arrows-first-name">First name</label>
+                                                                <input type="text" id="sw-arrows-first-name" class="form-control" placeholder="Enter First name...">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-arrows-last-name">Last name</label>
+                                                                <input type="text" id="sw-arrows-last-name" class="form-control" placeholder="Enter Last name...">
+                                                            </div>                                    
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-arrows-email">Email</label>
+                                                                <input type="email" id="sw-arrows-email" class="form-control" placeholder="Enter Email...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-arrows-step-3">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-center">
+                                                                <div class="mb-3">
+                                                                    <i class="uil uil-check-square text-success h2"></i>
+                                                                </div>
+                                                                <h3>Thank you !</h3>
+                                                                <p class="w-75 mb-2 mx-auto text-muted">
+                                                                    Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam mattis dictum aliquet.
+                                                                </p>
+                                                                <div class="mb-3">
+                                                                    <div class="form-check d-inline-block">
+                                                                        <input type="checkbox" class="form-check-input" id="sm-arrows-customCheck">
+                                                                        <label class="form-check-label" for="sm-arrows-customCheck">I agree with the Terms and Conditions</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mt-0 mb-1">Circles in Header</h4>
+                                        <p class="sub-header">Example of Circles wizard</p>
+                                        <div id="smartwizard-circles">
+                                            <ul>
+                                                <li><a href="#sw-circles-step-1">01<small class="d-block fw-normal">Account</small></a></li>
+                                                <li><a href="#sw-circles-step-2">02<small class="d-block fw-normal">Profile</small></a></li>
+                                                <li><a href="#sw-circles-step-3">03<small class="d-block fw-normal">Finish</small></a></li>
+                                            </ul>
+                                            
+                                            <div class="p-3">
+                                                <div id="sw-circles-step-1">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-circles-userName">User name</label>
+                                                                <input type="text" class="form-control" id="sw-circles-userName" placeholder="Enter User name...">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-circles-password"> Password</label>
+                                                                <input type="password" id="sw-circles-password" class="form-control" placeholder="Enter Password...">
+                                                            </div>
+                                                            
+                                                            <div class="mb-3 mb-0">
+                                                                <label class="form-label" for="sw-circles-confirm">Re Password</label>
+                                                                <input type="password" id="sw-circles-confirm" class="form-control" placeholder="Enter Re Password...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-circles-step-2">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-circles-first-name">First name</label>
+                                                                <input type="text" id="sw-circles-first-name" class="form-control" placeholder="Enter First name...">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-circles-last-name">Last name</label>
+                                                                <input type="text" id="sw-circles-last-name" class="form-control" placeholder="Enter Last name...">
+                                                            </div>                                    
+                                                            <div class="mb-3 mb-0">
+                                                                <label class="form-label" for="sw-circles-email">Email</label>
+                                                                <input type="email" id="sw-circles-email" class="form-control" placeholder="Enter Email...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-circles-step-3">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-center">
+                                                                <div class="mb-3">
+                                                                    <i class="uil uil-check-square text-success h2"></i>
+                                                                </div>
+                                                                <h3>Thank you !</h3>
+                                                                <p class="w-75 mb-2 mx-auto text-muted">
+                                                                    Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam mattis dictum aliquet.
+                                                                </p>
+                                                                <div class="mb-3">
+                                                                    <div class="form-check d-inline-block">
+                                                                        <input type="checkbox" class="form-check-input" id="sm-circles-customCheck">
+                                                                        <label class="form-check-label" for="sm-circles-customCheck">I agree with the Terms and Conditions</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+                            <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title mt-0 mb-1">Dots in Header</h4>
+                                        <p class="sub-header">Example of Dots wizard</p>
+                                        <div id="smartwizard-dots">
+                                            <ul>
+                                                <li><a href="#sw-dots-step-1">Account<small class="d-block fw-normal">Step description</small></a></li>
+                                                <li><a href="#sw-dots-step-2">Profile<small class="d-block fw-normal">Step description</small></a></li>
+                                                <li><a href="#sw-dots-step-3">Finish<small class="d-block fw-normal">Step description</small></a></li>
+                                            </ul>
+                                            
+                                            <div class="p-3">
+                                                <div id="sw-dots-step-1">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-dots-userName">User name</label>
+                                                                <input type="text" class="form-control" id="sw-dots-userName" placeholder="Enter User name...">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-dots-password"> Password</label>
+                                                                <input type="password" id="sw-dots-password" class="form-control" placeholder="Enter Password...">
+                                                            </div>
+                                                            
+                                                            <div class="mb-3 mb-0">
+                                                                <label class="form-label" for="sw-dots-confirm">Re Password</label>
+                                                                <input type="password" id="sw-dots-confirm" class="form-control" placeholder="Enter Re Password...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-dots-step-2">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-dots-first-name">First name</label>
+                                                                <input type="text" id="sw-dots-first-name" class="form-control" placeholder="Enter First name...">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label" for="sw-dots-last-name">Last name</label>
+                                                                <input type="text" id="sw-dots-last-name" class="form-control" placeholder="Enter Last name...">
+                                                            </div>                                    
+                                                            <div class="mb-3 mb-0">
+                                                                <label class="form-label" for="sw-dots-email">Email</label>
+                                                                <input type="email" id="sw-dots-email" class="form-control" placeholder="Enter Email...">
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                                <div id="sw-dots-step-3">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="text-center">
+                                                                <div class="mb-3">
+                                                                    <i class="uil uil-check-square text-success h2"></i>
+                                                                </div>
+                                                                <h3>Thank you !</h3>
+                                                                <p class="w-75 mb-2 mx-auto text-muted">
+                                                                    Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam mattis dictum aliquet.
+                                                                </p>
+                                                                <div class="mb-3">
+                                                                    <div class="form-check d-inline-block">
+                                                                        <input type="checkbox" class="form-check-input" id="sm-dots-customCheck">
+                                                                        <label class="form-check-label" for="sm-dots-customCheck">I agree with the Terms and Conditions</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div> <!-- end col -->
+                                                    </div> <!-- end row -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <script src="assets/libs/smartwizard/js/jquery.smartWizard.min.js"></script>
+
+        <script src="assets/js/pages/form-wizard.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

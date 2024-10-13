@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include("partials/title-meta.html", {"title": "Widgets"})
+
+    <!-- plugins -->
+    <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+
+    @@include('./partials/head-css.html')
+
+</head>
+
+<body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        @@include('./partials/topbar.html')
+
+        @@include('./partials/left-sidebar.html')
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="page-title-box">
+                                <h4 class="page-title">Widgets</h4>
+                                <div class="page-title-right">
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Shreyu</a></li>
+                                        <li class="breadcrumb-item active">Widgets</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+
+                    <!-- stats with icon -->
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="text-muted text-uppercase fs-12 fw-bold">Today Revenue</span>
+                                            <h3 class="mb-0">$851</h3>
+                                        </div>
+                                        <div class="align-self-center flex-shrink-0">
+                                            <span class="icon-lg icon-dual-primary" data-feather="shopping-bag"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="text-muted text-uppercase fs-12 fw-bold">Product Sold</span>
+                                            <h3 class="mb-0">2541</h3>
+                                        </div>
+                                        <div class="align-self-center flex-shrink-0">
+                                            <span class="icon-lg icon-dual-warning" data-feather="coffee"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="text-muted text-uppercase fs-12 fw-bold">New Customers</span>
+                                            <h3 class="mb-0">654</h3>
+                                        </div>
+                                        <div class="align-self-center flex-shrink-0">
+                                            <span class="icon-lg icon-dual-success" data-feather="users"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="text-muted text-uppercase fs-12 fw-bold">New Visitors</span>
+                                            <h3 class="mb-0">854</h3>
+                                        </div>
+                                        <div class="align-self-center flex-shrink-0">
+                                            <span class="icon-lg icon-dual-info" data-feather="file-text"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div>
+                                        <span class="text-muted text-uppercase fs-12 fw-bold">Today Revenue</span>
+                                        <h3>$6512</h3>
+                                        <div class="progress my-2" style="height: 5px;">
+                                            <div class="progress-bar bg-primary" role="progressbar" style="width: 32%" aria-valuenow="32" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="text-muted fw-semibold">36% Avg</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div>
+                                        <span class="text-muted text-uppercase fs-12 fw-bold">Product Sold</span>
+                                        <h3>352</h3>
+                                        <div class="progress my-2" style="height: 5px;">
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="text-muted fw-semibold">36 Daily Avg</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div>
+                                        <span class="text-muted text-uppercase fs-12 fw-bold">New Customers</span>
+                                        <h3>7580</h3>
+                                        <div class="progress my-2" style="height: 5px;">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="text-muted fw-semibold">3 Daily Avg</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div>
+                                        <span class="text-muted text-uppercase fs-12 fw-bold">New Visitors</span>
+                                        <h3>6985</h3>
+                                        <div class="progress my-2" style="height: 5px;">
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <span class="text-muted fw-semibold">300 Daily Avg</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- charts -->
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="text-muted text-uppercase fs-12 fw-bold">Today Revenue</span>
+                                            <h3 class="mb-0">$2100</h3>
+                                        </div>
+                                        <div class="align-self-center flex-shrink-0">
+                                            <div id="today-revenue-chart" class="apex-charts"></div>
+                                            <span class="text-success fw-bold fs-13"><i class='uil uil-arrow-up'></i> 10.21%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="text-muted text-uppercase fs-12 fw-bold">Product Sold</span>
+                                            <h3 class="mb-0">558</h3>
+                                        </div>
+                                        <div class="align-self-center flex-shrink-0">
+                                            <div id="today-product-sold-chart" class="apex-charts">
+                                            </div>
+                                            <span class="text-danger fw-bold fs-13"><i class='uil uil-arrow-down'></i> 5.05%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="text-muted text-uppercase fs-12 fw-bold">New Customers</span>
+                                            <h3 class="mb-0">65</h3>
+                                        </div>
+                                        <div class="align-self-center flex-shrink-0">
+                                            <div id="today-new-customer-chart" class="apex-charts">
+                                            </div>
+                                            <span class="text-success fw-bold fs-13"><i class='uil uil-arrow-up'></i> 25.16%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <div class="flex-grow-1">
+                                            <span class="text-muted text-uppercase fs-12 fw-bold">New Visitors</span>
+                                            <h3 class="mb-0">958</h3>
+                                        </div>
+                                        <div class="align-self-center flex-shrink-0">
+                                            <div id="today-new-visitors-chart" class="apex-charts">
+                                            </div>
+                                            <span class="text-danger fw-bold fs-13"><i class='uil uil-arrow-down'></i> 5.05%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div id="traffic-chart" class="apex-charts" dir="ltr"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div id="customers-chart" class="apex-charts" dir="ltr"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div id="revenue-chart" class="apex-charts" dir="ltr"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3 pb-1">Profile/User</h4>
+
+                    <div class="row">
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body pb-0">
+                                    <div class="text-center mt-2">
+                                        <img src="assets/images/users/avatar-7.jpg" alt="" class="avatar-xl rounded-circle" />
+                                        <h4 class="mt-2 mb-0">Shreyu N</h4>
+                                        <h6 class="text-muted fw-normal mt-2 mb-3">User Experience Specialist</h6>
+                                        <button type="button" class="btn btn-primary btn-sm me-1">Follow</button>
+                                        <button type="button" class="btn btn-white btn-sm">Message</button>
+
+                                        <div class="mt-3 pt-3 border-top text-start">
+                                            <p class="text-muted mb-2">
+                                                Hi I'm Shreyu. I am user experience and user interface designer.
+                                                I have been working on UI & UX since last 10 years.
+                                            </p>
+
+                                            <p class="mb-2">
+                                                <label class="badge badge-soft-success">UI & UX</label>
+                                                <label class="badge badge-soft-success">Frontend Development</label>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card profile-widget">
+                                <img src="assets/images/covers/2.jpg" alt="Shreyu" class="card-img-top" />
+                                <div class="dropdown card-action float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="uil uil-ellipsis-v fs-16 text-white"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">
+                                            <i class="uil uil-edit-alt me-2"></i>Edit
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">
+                                            <i class="uil uil-refresh me-2"></i>Refresh
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                            <i class="uil uil-trash me-2"></i>Delete
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="card-body text-center p-0">
+                                    <div class="profile-info pb-3">
+                                        <img src="assets/images/users/avatar-7.jpg" alt="" class="img-thumbnail avatar-xl rounded-circle" />
+                                        <h4 class="mt-2 mb-0">Shreyu N</h4>
+                                        <h6 class="text-muted fw-normal mt-2 mb-3">User Experience Specialist</h6>
+                                        <button type="button" class="btn btn-primary btn-sm me-1">Follow</button>
+                                        <button type="button" class="btn btn-white btn-sm">Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-7.jpg" class="avatar-lg rounded-circle me-2" alt="shreyu">
+                                        <div class="flex-grow-1">
+                                            <h4 class="mt-2 mb-0">Shreyu N</h4>
+                                            <h6 class="text-muted fw-normal mt-1 mb-4">New York, USA</h6>
+                                        </div>
+                                        <div class="dropdown float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="uil uil-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-edit-alt me-2"></i>Edit
+                                                </a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-refresh me-2"></i>Refresh
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                    <i class="uil uil-trash me-2"></i>Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="my-2 row justify-content-between">
+                                        <div class="col-sm-5">
+                                            <span class="fs-15"><i class='uil uil-calendar-alt me-1'></i>40 Days Ago</span>
+                                        </div>
+                                        <div class="col-sm mt-2 mt-sm-0">
+                                            <span class="fs-15"><i class='uil uil-users-alt me-1'></i>12,001</span>
+                                        </div>
+                                        <div class="col-sm mt-2 mt-sm-0 text-sm-end">
+                                            <span class="fs-15"><i class='uil uil-calendar-alt me-1'></i>1200</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-1 pt-2 border-top text-start">
+                                        <p class="text-muted mb-2">Hi I'm Shreyu. I am foodie and love to eat different cuisine!</p>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="col">
+                                            <img src="assets/images/small/img-4.jpg" alt="" class="img-fluid rounded shadow" />
+                                        </div>
+                                        <div class="col">
+                                            <img src="assets/images/small/img-5.jpg" alt="" class="img-fluid rounded shadow" />
+                                        </div>
+                                        <div class="col">
+                                            <img src="assets/images/small/img-6.jpg" alt="" class="img-fluid rounded shadow" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-4 text-center">
+                                        <div class="col">
+                                            <button type="button" class="btn btn-primary btn-sm w-100 me-1">Follow</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-white btn-sm w-100">Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="assets/images/users/avatar-7.jpg" class="card-img" alt="shreyu" />
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-1">Shreyu N</h5>
+                                            <h6 class="text-muted fw-normal mt-0 mb-3">New York, USA</h6>
+                                            <div class="row text-center">
+                                                <div class="col">
+                                                    <button type="button" class="btn btn-primary btn-sm w-100 me-1">Follow</button>
+                                                </div>
+                                                <div class="col">
+                                                    <button type="button" class="btn btn-white btn-sm w-100">Message</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body p-3">
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-7.jpg" class="me-3 avatar-lg rounded" alt="shreyu">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mt-1 mb-0">Shreyu N</h5>
+                                            <h6 class="fw-normal mt-1 mb-1">
+                                                <a href="">@shreyu</a>
+                                            </h6>
+                                            <p class="text-muted">Designer | Creative | Thinker</p>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2 border-top pt-2">
+                                        <div class="col">
+                                            <div class="d-flex">
+                                                <span class="icon-dual align-self-center me-2" data-feather="users"></span>
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mt-2 pt-1 mb-0 fs-16">1.9M</h5>
+                                                    <h6 class="fw-normal mt-0">Followers</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex">
+                                                <span class="icon-dual align-self-center me-2" data-feather="eye"></span>
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mt-2 pt-1 mb-0 fs-16">19M</h5>
+                                                    <h6 class="fw-normal mt-0">Views</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex">
+                                                <span class="icon-dual align-self-center me-2" data-feather="file-text"></span>
+                                                <div class="flex-grow-1">
+                                                    <h5 class="mt-2 pt-1 mb-0 fs-16">1k</h5>
+                                                    <h6 class="fw-normal mt-0">Posts</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3 text-center">
+                                        <div class="col">
+                                            <button type="button" class="btn btn-primary btn-sm w-100 me-1">Follow</button>
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn btn-white btn-sm w-100">Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="mb-3 pb-1">Team</h4>
+
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="header-title mb-3">Team Members</h6>
+                                    <div class="d-flex border-top pt-2">
+                                        <img src="assets/images/users/avatar-7.jpg" class="avatar rounded me-3" alt="shreyu">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mt-1 mb-0 fs-15">Shreyu N</h5>
+                                            <h6 class="text-muted fw-normal mt-1 mb-2">Senior Sales Guy</h6>
+                                        </div>
+                                        <div class="dropdown align-self-center float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="uil uil-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-edit-alt me-2"></i>Edit
+                                                </a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-exit me-2"></i>Remove from Team
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                    <i class="uil uil-trash me-2"></i>Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-1 border-top pt-2">
+                                        <img src="assets/images/users/avatar-9.jpg" class="avatar rounded me-3" alt="shreyu">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mt-1 mb-0 fs-15">Greeva Y</h5>
+                                            <h6 class="text-muted fw-normal mt-1 mb-2">Social d-flex Campaign</h6>
+                                        </div>
+                                        <div class="dropdown align-self-center float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="uil uil-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-edit-alt me-2"></i>Edit
+                                                </a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-exit me-2"></i>Remove from Team
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                    <i class="uil uil-trash me-2"></i>Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-1 border-top pt-2">
+                                        <img src="assets/images/users/avatar-4.jpg" class="avatar rounded me-3" alt="shreyu">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mt-1 mb-0 fs-15">Nik G</h5>
+                                            <h6 class="text-muted fw-normal mt-1 mb-2">Inventory Manager</h6>
+                                        </div>
+                                        <div class="dropdown align-self-center float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="uil uil-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-edit-alt me-2"></i>Edit
+                                                </a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-exit me-2"></i>Remove from Team
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                    <i class="uil uil-trash me-2"></i>Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-1 border-top pt-2">
+                                        <img src="assets/images/users/avatar-1.jpg" class="avatar rounded me-3" alt="shreyu">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mt-1 mb-0 fs-15">Hardik G</h5>
+                                            <h6 class="text-muted fw-normal mt-1 mb-2">Sales Person</h6>
+                                        </div>
+                                        <div class="dropdown align-self-center float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="uil uil-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-edit-alt me-2"></i>Edit
+                                                </a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-exit me-2"></i>Remove from Team
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                    <i class="uil uil-trash me-2"></i>Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex mt-1 border-top pt-2">
+                                        <img src="assets/images/users/avatar-8.jpg" class="avatar rounded me-3" alt="shreyu">
+                                        <div class="flex-grow-1">
+                                            <h5 class="mt-1 mb-0 fs-15">GB Patel G</h5>
+                                            <h6 class="text-muted fw-normal mt-1 mb-2">Sales Person</h6>
+                                        </div>
+                                        <div class="dropdown align-self-center float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="uil uil-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-edit-alt me-2"></i>Edit
+                                                </a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-exit me-2"></i>Remove from Team
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                    <i class="uil uil-trash me-2"></i>Delete
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="dropdown float-end">
+                                        <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="uil uil-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                <i class="uil uil-refresh me-2"></i>Refresh
+                                            </a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                <i class="uil uil-user-plus me-2"></i>Add New
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                <i class="uil uil-exit me-2"></i>Exit
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4 class="header-title mb-4">Team Chat</h4>
+
+                                    <div class="chat-conversation">
+                                        <div data-simplebar style="height: 314px;">
+                                            <ul class="conversation-list">
+                                                <li class="clearfix">
+                                                    <div class="chat-avatar">
+                                                        <img src="assets/images/users/avatar-5.jpg" alt="male">
+                                                        <i>10:00</i>
+                                                    </div>
+                                                    <div class="conversation-text">
+                                                        <div class="ctext-wrap">
+                                                            <i>Geneva</i>
+                                                            <p>Hello!</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix odd">
+                                                    <div class="chat-avatar">
+                                                        <img src="assets/images/users/avatar-1.jpg" alt="Female">
+                                                        <i>10:01</i>
+                                                    </div>
+                                                    <div class="conversation-text">
+                                                        <div class="ctext-wrap">
+                                                            <i>Dominic</i>
+                                                            <p>Hi, How are you? What about our next meeting?</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="chat-avatar">
+                                                        <img src="assets/images/users/avatar-5.jpg" alt="male">
+                                                        <i>10:01</i>
+                                                    </div>
+                                                    <div class="conversation-text">
+                                                        <div class="ctext-wrap">
+                                                            <i>Geneva</i>
+                                                            <p>Yeah everything is fine</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix odd">
+                                                    <div class="chat-avatar">
+                                                        <img src="assets/images/users/avatar-1.jpg" alt="male">
+                                                        <i>10:02</i>
+                                                    </div>
+                                                    <div class="conversation-text">
+                                                        <div class="ctext-wrap">
+                                                            <i>Dominic</i>
+                                                            <p>Wow that's great</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <form class="needs-validation" novalidate name="chat-form" id="chat-form">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <input type="text" class="form-control chat-input" placeholder="Enter your text" required>
+                                                    <div class="invalid-feedback">
+                                                        Please enter your messsage
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button type="submit" class="btn btn-danger chat-send w-100 waves-effect waves-light">Send</button>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div> <!-- end .chat-conversation-->
+                                </div>
+                            </div> <!-- end card-->
+                        </div>
+
+                        <div class="col-xl-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="dropdown float-end">
+                                        <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="uil uil-ellipsis-v"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end">
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                            </a>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                <i class="uil uil-refresh me-2"></i>Refresh
+                                            </a>
+                                            <div class="dropdown-divider"></div>
+                                            <!-- item-->
+                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                <i class="uil uil-trash me-2"></i>Delete
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h6 class="header-title mb-4">Team Events</h6>
+
+                                    <div class="row calendar-widget">
+                                        <div class="col-sm-6">
+                                            <div id="calendar-widget"></div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <ul class="list-unstyled ms-sm-3 ps-sm-5 mt-4 mt-sm-0">
+                                                <li class="mb-3">
+                                                    <p class="text-muted mb-0 fs-13">
+                                                        <i class="uil uil-calender me-1"></i>7:30 AM - 10:00 AM
+                                                    </p>
+                                                    <h6 class="mt-1 fs-16">UX Planning Meeting</h6>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <p class="text-muted mb-0 fs-13">
+                                                        <i class="uil uil-calender me-1"></i>10:30 AM - 11:45 AM
+                                                    </p>
+                                                    <h6 class="mt-1 fs-16">Hyper v3 Scope Review</h6>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <p class="text-muted mb-0 fs-13">
+                                                        <i class="uil uil-calender me-1"></i>12:15 PM - 02:00 PM
+                                                    </p>
+                                                    <h6 class="mt-1 fs-16">Ubold v4 Brainstorming</h6>
+                                                </li>
+                                                <li class="mb-3">
+                                                    <p class="text-muted mb-0 fs-13">
+                                                        <i class="uil uil-calender me-1"></i>5:30 PM - 06:15 PM
+                                                    </p>
+                                                    <h6 class="mt-1 fs-16">Shreyu React Planning</h6>
+                                                </li>
+                                                <li>
+                                                    <a href="" class="btn btn-primary w-75 mb-0">
+                                                        <i class="uil uil-focus-add me-2"></i>Add Event
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row">
+                        <!-- overview -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card">
+                                <div class="card-body p-0">
+                                    <div class="p-3">
+                                        <div class="dropdown float-end">
+                                            <a href="#" class="dropdown-toggle arrow-none text-muted" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="uil uil-ellipsis-v"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end">
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-refresh me-2"></i>Refresh
+                                                </a>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item">
+                                                    <i class="uil uil-user-plus me-2"></i>Add New
+                                                </a>
+                                                <div class="dropdown-divider"></div>
+                                                <!-- item-->
+                                                <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                    <i class="uil uil-exit me-2"></i>Exit
+                                                </a>
+                                            </div>
+                                        </div>
+    
+                                        <h5 class="card-title header-title mb-0">Overview</h5>
+                                    </div>
+                                    
+                                    <!-- stat 1 -->
+                                    <div class="d-flex p-3 border-bottom">
+                                        <div class="flex-grow-1">
+                                            <h4 class="mt-0 mb-1 fs-22">121,000</h4>
+                                            <span class="text-muted">Total Visitors</span>
+                                        </div>
+                                        <i data-feather="users" class="align-self-center icon-dual icon-lg"></i>
+                                    </div>
+
+                                    <!-- stat 2 -->
+                                    <div class="d-flex p-3 border-bottom">
+                                        <div class="flex-grow-1">
+                                            <h4 class="mt-0 mb-1 fs-22">21,000</h4>
+                                            <span class="text-muted">Total Product Views</span>
+                                        </div>
+                                        <i data-feather="image" class="align-self-center icon-dual icon-lg"></i>
+                                    </div>
+
+                                    <!-- stat 3 -->
+                                    <div class="d-flex p-3 border-bottom">
+                                        <div class="flex-grow-1">
+                                            <h4 class="mt-0 mb-1 fs-22">$21.5</h4>
+                                            <span class="text-muted">Revenue Per Visitor</span>
+                                        </div>
+                                        <i data-feather="shopping-bag" class="align-self-center icon-dual icon-lg"></i>
+                                    </div>
+
+                                    <!-- stat 4 -->
+                                    <div class="d-flex p-3">
+                                        <div class="flex-grow-1">
+                                            <h4 class="mt-0 mb-1 fs-22">8,547</h4>
+                                            <span class="text-muted">Revenue Per Visitor</span>
+                                        </div>
+                                        <i data-feather="aperture" class="align-self-center icon-dual icon-lg"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tasks -->
+                        <div class="col-md-6 col-xl-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a href="task-list.html" class="btn btn-primary btn-sm float-end">View All</a>
+                                    <h6 class="header-title mb-4">Tasks</h6>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task1">
+                                                <label class="form-check-label" for="task1">
+                                                    Draft the new contract document for sales team
+                                                </label>
+                                                <p class="fs-13 text-muted">Due on 24 Aug, 2019</p>
+                                            </div> <!-- end checkbox -->
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task2">
+                                                <label class="form-check-label" for="task2">
+                                                    iOS App home page
+                                                </label>
+                                                <p class="fs-13 text-muted">Due on 23 Aug, 2019</p>
+                                            </div> <!-- end checkbox -->
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task3">
+                                                <label class="form-check-label" for="task3">
+                                                    Write a release note for Shreyu
+                                                </label>
+                                                <p class="fs-13 text-muted">Due on 22 Aug, 2019</p>
+                                            </div> <!-- end checkbox -->
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task4">
+                                                <label class="form-check-label" for="task4">
+                                                    Invite Greeva to a project shreyu admin
+                                                </label>
+                                                <p class="fs-13 text-muted">Due on 21 Aug, 2019</p>
+                                            </div> <!-- end checkbox -->
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" id="task5">
+                                                <label class="form-check-label" for="task5">
+                                                    Enable analytics tracking for main website
+                                                </label>
+                                                <p class="fs-13 text-muted">Due on 20 Aug, 2019</p>
+                                            </div> <!-- end checkbox -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- activities -->
+                        <div class="col-xl-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a href="/" class="btn btn-primary btn-sm float-end">View All</a>
+                                    <h6 class="header-title mb-4">Activities</h6>
+
+                                    <div class="d-flex">
+                                        <img src="assets/images/users/avatar-7.jpg" class="me-3 avatar rounded-circle" alt="shreyu" />
+                                        <div class="flex-grow-1">
+                                            <h6 class="mt-0 mb-1 fs-15 fw-normal">
+                                                <a href="" class="fw-bold">Shreyu</a> has attached design-draft.sketch in project 
+                                                <span class="fw-bold text-primary">Admin</span>
+                                            </h6>
+                                            <p class="text-muted">2 Min Ago</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex mt-3">
+                                        <div class="avatar me-3 fs-24 fw-normal flex-shrink-0">
+                                            <span class="avatar-title rounded-circle bg-soft-primary text-primary">G</span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mt-0 mb-1 fs-15 fw-normal">
+                                                <a href="" class="fw-bold">Greeva</a> has commented on project
+                                                <span class="fw-bold text-primary">Admin</span>
+                                            </h6>
+                                            <p class="text-muted">12 Min Ago</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex mt-3">
+                                        <img src="assets/images/users/avatar-9.jpg" class="me-3 avatar rounded-circle" alt="Mannat" />
+                                        <div class="flex-grow-1">
+                                            <h6 class="mt-0 mb-1 fs-15 fw-normal">
+                                                <a href="" class="fw-bold">Mannat</a> has reacted with 
+                                                <i class='uil uil-thumbs-up text-success fs-13'></i> on comment from 
+                                                <span class="fw-bold text-primary">Shreyu</span> on project 
+                                                <span class="fw-bold text-primary">Admin</span>
+                                            </h6>
+                                            <p class="text-muted">14 Min Ago</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex mt-3">
+                                        <div class="avatar me-3 fs-24 fw-normal flex-shrink-0">
+                                            <span class="avatar-title rounded-circle bg-soft-success text-success">D</span>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mt-0 mb-1 fs-15 fw-normal">
+                                                <a href="" class="fw-bold">Dhyani</a> has reacted with 
+                                                <i class='uil uil-heart-sign text-danger fs-13'></i> on comment from 
+                                                <span class="fw-bold text-primary">Shreyu</span> on project 
+                                                <span class="fw-bold text-primary">Admin</span>
+                                            </h6>
+                                            <p class="text-muted">14 Min Ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+            
+        </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+    </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- optional plugins -->
+        <script src="assets/libs/moment/min/moment.min.js"></script>
+        <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+        <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+        <!-- page js -->
+        <script src="assets/js/pages/widgets.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+    
+
+</body>
+
+</html>

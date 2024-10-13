@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("partials/title-meta.html", {"title": "Chat"})
+
+        <!-- plugins -->
+        <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+
+		@@include('./partials/head-css.html')
+
+    </head>
+
+    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html')
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Chat</h4>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Shreyu</a></li>
+                                            <li class="breadcrumb-item active">Chat</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title -->
+
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-5">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex pb-2 border-bottom align-items-center">
+                                            <img src="assets/images/users/avatar-2.jpg" class="me-2 rounded-circle" height="48" alt="Brandon Smith" />
+                                            <div>
+                                                <h5 class="my-0 fs-14">Shreyu N</h5>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <ul class="list-inline text-end mb-0">
+                                                    <li class="list-inline-item fs-18 dropdown">
+                                                        <a href="javascript: void(0);" class="dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-people fs-18 me-2"></i>New Group</a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-person-lines-fill fs-18 me-2"></i>Contacts</a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-bookmark fs-18 me-2"></i>Saved Message</a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-person-plus fs-18 me-2"></i>Invite Friends</a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-question-circle fs-18 me-2"></i>Help</a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-gear fs-18 me-2"></i>Setting</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+        
+                                        <!-- start searchbar -->
+                                        <div>
+                                            <form class="chat-search">
+                                                <div class="chat-search-box">                                                        
+                                                    <div class="input-group">
+                                                        <button class="btn input-group-text" type="submit">
+                                                            <i class="uil uil-search"></i>
+                                                        </button>
+                                                        <input type="search" class="form-control" placeholder="Search..." id="top-search">                                                            
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- End searchbar -->
+                                        
+                                         <!-- start contact list -->
+                                        <div class="pe-2" data-simplebar style="max-height: 555px">
+                                            <a href="javascript:void(0);" class="text-body">
+                                                <div class="d-flex align-items-start p-2">
+                                                    <div class="position-relative">
+                                                        <span class="user-status"></span>
+                                                        <img src="assets/images/users/avatar-1.jpg" class="me-2 rounded-circle" height="48" alt="Brandon Smith" />
+                                                    </div>  
+                                                    <div class="w-100 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-14">
+                                                            <span class="float-end text-muted fs-12">5:30am</span>
+                                                            Brandon Smith
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted fs-14">
+                                                            <span class="float-end badge bg-danger text-white">3</span>
+                                                            <span class="w-75 text-dark">How are you today?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="text-body">
+                                                <div class="d-flex align-items-start p-2">
+                                                    <div class="position-relative">
+                                                        <span class="user-status bg-success"></span>
+                                                        <img src="assets/images/users/avatar-3.jpg" class="me-2 rounded-circle" height="48" alt="Yarin C" />
+                                                    </div>
+                                                    <div class="w-100 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-14">
+                                                            <span class="float-end text-muted fs-12">Thu</span>
+                                                            Yarin C
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted fs-14">
+                                                            <span class="w-75">Hey! a reminder for tommorow's meeting...</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="text-body">
+                                                <div class="d-flex align-items-start p-2">
+                                                    <div class="position-relative">
+                                                        <span class="user-status bg-danger"></span>
+                                                        <img src="assets/images/users/avatar-4.jpg" class="me-2 rounded-circle" height="48" alt="Maria C" />
+                                                    </div>
+                                                    <div class="w-100 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-14">
+                                                            <span class="float-end text-muted fs-12">4:30am</span>
+                                                            Maria C
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted fs-14">
+                                                            <span class="w-75">Are we going to have this week's planning meeting today?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="text-body">
+                                                <div class="d-flex align-items-start p-2 bg-light">
+                                                    <div class="position-relative">
+                                                        <span class="user-status bg-success"></span>
+                                                        <img src="assets/images/users/avatar-5.jpg" class="me-2 rounded-circle" height="48" alt="Rhonda D" />
+                                                    </div>
+                                                    <div class="w-100 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-14">
+                                                            <span class="float-end text-muted fs-12">Wed</span>
+                                                            Rhonda D
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted fs-14">
+                                                            <span class="w-75">Please check this template...</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="text-body">
+                                                <div class="d-flex align-items-start p-2">
+                                                    <div class="position-relative">
+                                                        <span class="user-status"></span>
+                                                        <img src="assets/images/users/avatar-6.jpg" class="me-2 rounded-circle" height="48" alt="Michael H" />
+                                                    </div>
+                                                    <div class="w-100 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-14">
+                                                            <span class="float-end text-muted fs-12">Tue</span>
+                                                            Michael H
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted fs-14">
+                                                            <span class="float-end badge bg-danger text-white">25</span>
+                                                            <span class="w-75 text-dark">Are you free for 15 min? would like to discuss something...</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="text-body">
+                                                <div class="d-flex align-items-start p-2">
+                                                    <div class="position-relative">
+                                                        <span class="user-status"></span>
+                                                        <img src="assets/images/users/avatar-7.jpg" class="me-2 rounded-circle" height="48" alt="Tomas J" />
+                                                    </div>
+                                                    <div class="w-100 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-14">
+                                                            <span class="float-end text-muted fs-12">Tue</span>
+                                                            Tomas J
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted fs-14">
+                                                            <span class="float-end badge bg-danger text-white">1</span>
+                                                            <span class="w-75 text-dark">How are you?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="text-body">
+                                                <div class="d-flex align-items-start p-2">
+                                                    <div class="position-relative">
+                                                        <span class="user-status bg-warning"></span>
+                                                        <img src="assets/images/users/avatar-8.jpg" class="me-2 rounded-circle" height="48" alt="Rickey J" />
+                                                    </div>
+                                                    <div class="w-100 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-14">
+                                                            <span class="float-end text-muted fs-12">Mon</span>
+                                                            Rickey J
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted fs-14">
+                                                            <span class="w-75">Would you like to join us?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div> 
+                                        <!-- End contact list -->
+                                    </div> <!-- End card-body -->
+                                </div> <!-- End card -->                                             
+                            </div> <!-- End col -->
+                            <div class="col-xl-9 col-lg-7">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex pb-2 border-bottom align-items-center">
+                                            <img src="assets/images/users/avatar-5.jpg" class="me-2 rounded-circle" height="48" alt="Brandon Smith"/>
+                                            <div>
+                                                <h5 class="mt-0 mb-0 fs-14">Rhonda D</h5>
+                                                <p class="mb-0">online</p>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <ul class="list-inline float-end mb-0">
+                                                    <li class="list-inline-item fs-18 me-3 dropdown">
+                                                        <a href="javascript: void(0);" class="text-dark" data-bs-toggle="modal" data-bs-target="#voicecall">
+                                                            <i class="bi bi-telephone-plus"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item fs-18 me-3 dropdown">
+                                                        <a href="javascript: void(0);" class="text-dark" data-bs-toggle="modal" data-bs-target="#videocall">
+                                                            <i class="bi bi-camera-video"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="list-inline-item fs-18 dropdown">
+                                                        <a href="javascript: void(0);" class="dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="javascript: void(0);" data-bs-toggle="modal" data-bs-target="#viewProfile">
+                                                                <i class="bi bi-person-circle fs-18 me-2"></i>View Profile
+                                                            </a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-music-note-list fs-18 me-2"></i>Media, Links and Docs</a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-search fs-18 me-2"></i>Search</a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-image fs-18 me-2"></i>Wallpaper</a>
+                                                            <a class="dropdown-item" href="javascript: void(0);"><i class="bi bi-arrow-right-circle fs-18 me-2"></i>More</a>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="mt-1">
+                                            <ul class="conversation-list px-0 h-100" data-simplebar style="max-height: 505px">
+                                                <li class="position-relative">
+                                                    <hr>
+                                                    <h4><span class="badge bg-light text-dark position-absolute top-0 start-50 translate-middle">Yesterday</span></h4>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex">
+                                                            <div class="ctext-wrap">
+                                                                <p>Hello!</p>                                                                                                                                        
+                                                            </div>                                                                    
+                                                            <div class="conversation-actions dropdown dropend">
+                                                                <a href="javascript: void(0);" class="text-dark ps-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>
+                                                        </div>                                                                
+                                                        <p class="text-muted fs-12 mb-0 mt-1">8:18 am</p>
+                                                    </div>                                                            
+                                                </li>
+                                                <li class="clearfix odd">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="conversation-actions dropdown dropstart">
+                                                                <a href="javascript: void(0);" class="text-dark pe-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>  
+                                                            <div class="ctext-wrap">
+                                                                <p>Hi, How are you? What about our next meeting?</p>
+                                                            </div>  
+                                                        </div>                                                          
+                                                        <p class="text-muted fs-12 mb-0 mt-1">8:20 am<i class="bi bi-check2-all ms-1 text-success"></i></p>
+                                                    </div>
+                                                </li>
+                                                <li class="position-relative">
+                                                    <hr>
+                                                    <h4><span class="badge bg-light text-dark position-absolute top-0 start-50 translate-middle">Today</span></h4>
+                                                </li>
+                                                <li class="clearfix mb-1">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex">
+                                                            <div class="ctext-wrap">
+                                                                <p>Yeah everything is fine</p>
+                                                            </div>
+                                                            <div class="conversation-actions dropdown dropend">
+                                                                <a href="javascript: void(0);" class="text-dark ps-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex">
+                                                            <div class="ctext-wrap">
+                                                                <p>Let's have it today if you are free</p>
+                                                            </div>
+                                                            <div class="conversation-actions dropdown dropend">
+                                                                <a href="javascript: void(0);" class="text-dark ps-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-muted fs-12 mb-0 mt-1">8:21 am</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix odd">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="conversation-actions dropdown dropstart">
+                                                                <a href="javascript: void(0);" class="text-dark pe-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div> 
+                                                            <div class="ctext-wrap">
+                                                                <p>Sure! let me know if 11am works for you</p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-muted fs-12 mb-0 mt-1">8:25 am<i class="bi bi-check2-all ms-1 text-success"></i></p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex">
+                                                            <div class="ctext-wrap">
+                                                                <p>Sorry, I have another meeting scheduled at 11am. Can we have it at 2pm instead?</p>
+                                                            </div>
+                                                            <div class="conversation-actions dropdown dropend">
+                                                                <a href="javascript: void(0);" class="text-dark ps-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-muted fs-12 mb-0 mt-1">8:26 am</p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix odd mb-1">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="conversation-actions dropdown dropstart">
+                                                                <a href="javascript: void(0);" class="text-dark pe-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>
+                                                            <div class="ctext-wrap">
+                                                                <p>2pm it is. sure, we can also discuss about the presentation format if you have some extra mins</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix odd">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="conversation-actions dropdown dropstart">
+                                                                <a href="javascript: void(0);" class="text-dark pe-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>
+                                                            <div class="ctext-wrap">
+                                                                <p>Sure let's discuss about presentation format, it would be great to finalize today.</p>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-muted fs-12 mb-0 mt-1">8:27 am<i class="bi bi-check2-all ms-1 text-success"></i></p>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix mb-1">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex">
+                                                            <div class="ctext-wrap">
+                                                                <p>Ok. I am attaching the last year format and assets here....</p>
+                                                            </div>
+                                                            <div class="conversation-actions dropdown dropend">
+                                                                <a href="javascript: void(0);" class="text-dark ps-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <div class="conversation-text ms-0">
+                                                        <div class="d-flex">
+                                                            <div class="card mb-1 shadow-none border text-start">
+                                                                <div class="p-2">
+                                                                    <div class="row align-items-center">
+                                                                        <div class="col-auto">
+                                                                            <div class="avatar-sm bg-primary text-white">
+                                                                                <span class="avatar-title rounded">.ZIP</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col ps-0">
+                                                                            <a href="javascript:void(0);" class="text-muted fw-bold">Hyper-admin-design.zip</a>
+                                                                            <p class="mb-0">2.3 MB</p>
+                                                                        </div>
+                                                                        <div class="col-auto">
+                                                                            <a href="javascript:void(0);" class="ps-3 fs-24">
+                                                                                <i class="bi bi-arrow-down-square"></i>    
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="conversation-actions dropdown dropend">
+                                                                <a href="javascript: void(0);" class="text-dark ps-1" data-bs-toggle="dropdown" aria-expanded="false"><i class='bi bi-three-dots-vertical fs-14'></i></a>                
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-reply fs-18 me-2"></i>Reply
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-star fs-18 me-2"></i>Starred
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-trash fs-18 me-2"></i>Delete
+                                                                    </a>   
+                                                                    <a class="dropdown-item" href="#">
+                                                                        <i class="bi bi-files fs-18 me-2"></i>Copy
+                                                                    </a>                                                                            
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-muted fs-12 mb-0 mt-1">8:32 am</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="mt-2 bg-light p-3 rounded">
+                                                <form class="needs-validation" novalidate="" name="chat-form"
+                                                    id="chat-form">
+                                                    <div class="row">
+                                                        <div class="col mb-2 mb-sm-0">
+                                                            <input type="text" class="form-control border-0" placeholder="Enter your text" required="">
+                                                            <div class="invalid-feedback">
+                                                                Please enter your messsage
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-auto">
+                                                            <div class="btn-group">
+                                                                <a href="#" class="btn btn-light"><i class="bi bi-emoji-smile fs-18"></i></a>
+                                                                <a href="#" class="btn btn-light">
+                                                                    <i class="bi bi-paperclip fs-18"></i>
+                                                                </a>
+                                                                <a href="#" class="btn btn-light"><i class="bi bi-camera fs-18"></i></a>
+                                                                <div class="d-grid">
+                                                                    <button type="submit" class="btn btn-success chat-send"><i class='uil uil-message'></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div> 
+                                                    </div> 
+                                                </form>
+                                            </div> 
+                                        </div> 
+                                    </div> <!-- End card-body -->
+                                </div> <!-- End card -->
+                            </div> <!-- End col -->
+                        </div> <!-- End row -->
+                        
+                    </div> <!-- End container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+                <!-- Profile Modal -->
+                <div class="modal fade" id="viewProfile" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class=" m-2">
+                                <div class="modal-header">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                                
+                                </div>
+                                <div class="text-center mb-3">
+                                    <img src="assets/images/users/avatar-5.jpg" class="rounded-circle avatar-lg" height="48" alt="Rhonda D"/>
+                                </div>
+                                <div class="text-center mb-3">
+                                    <h5 class="mt-0 mb-0 fs-18">Rhonda D</h5>
+                                </div>
+                                <div class="text-center mb-3">
+                                    <div class="avatar-sm fw-bold d-inline-block me-2" data-bs-toggle="modal" data-bs-target="#voicecall" data-bs-dismiss="modal">
+                                        <a href="javascript: void(0);" class="avatar-title rounded-circle border border-secondary text-dark">
+                                            <i class="bi bi-telephone"></i>
+                                        </a>
+                                    </div>
+                                    <div class="avatar-sm fw-bold d-inline-block me-2" data-bs-toggle="modal" data-bs-target="#videocall" data-bs-dismiss="modal">
+                                        <a href="javascript: void(0);" class="avatar-title rounded-circle border border-secondary text-dark">
+                                            <i class="bi bi-camera-video"></i>
+                                        </a>
+                                    </div>
+                                    <div class="avatar-sm fw-bold d-inline-block me-2" data-bs-dismiss="modal" aria-label="Close">
+                                        <a href="javascript: void(0);" class="avatar-title rounded-circle border border-secondary text-dark">
+                                            <i class="bi bi-chat-left-dots"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="accordion custom-accordionwitharrow" id="accordionExample">
+                                    <div class="card mb-1 shadow-none border-0">
+                                        <a href="" class="text-dark" data-bs-toggle="collapse" data-bs-target="#about" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="card-header border-0" id="headingOne">
+                                                <h5 class="m-0 fs-16">About 
+                                                    <i class="uil uil-angle-down float-end accordion-arrow"></i>
+                                                </h5>
+                                            </div>
+                                        </a>
+                                        <div id="about" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="card-body pt-0 text-muted">
+                                                <div class="row align-items-center ms-1">
+                                                    <div class="col-4 p-2"><i class="bi bi-telephone fs-18 me-2"></i>Phone</div>
+                                                    <div class="col-8 p-2 border-bottom">(415) 281 - 1649</div>
+                                                    <div class="col-4 p-2"><i class="bi bi-envelope fs-18 me-2"></i>Email</div>
+                                                    <div class="col-8 p-2 border-bottom">shreyu.abc@gmail.com</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="" class="text-dark" data-bs-toggle="collapse" data-bs-target="#files" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="card-header border-0" id="headingOne">
+                                                <h5 class="m-0 fs-16">Media, Links and Docs 
+                                                    <i class="uil uil-angle-down float-end accordion-arrow"></i>
+                                                </h5>
+                                            </div>
+                                        </a>
+                                        <div id="files" class="collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                            <div class="card-body pt-0 text-muted">
+                                                <div class="d-inline-block me-2">
+                                                    <i class="bi bi-file-earmark-pdf h2"></i>
+                                                </div>  
+                                                <div class="d-inline-block me-2">
+                                                    <i class="bi bi-file-earmark-word h2"></i>
+                                                </div>     
+                                                <div class="d-inline-block me-2">
+                                                    <i class="bi bi-images h2"></i>
+                                                </div> 
+                                                <div class="d-inline-block me-2">
+                                                    <i class="bi bi-file-earmark-ppt h2"></i>
+                                                </div>                                             
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- video call Modal -->
+                <div class="modal fade" id="videocall" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-sm">
+                        <div class="modal-content video-call">
+                            
+                            <div class="modal-header mb-5 justify-content-end">
+                                <div class="video-call-head">
+                                    <img src="assets/images/users/avatar-2.jpg" class="rounded" alt="Rhonda D"/>
+                                </div>
+                            </div>
+                           
+                            <div class="modal-body">                                   
+                                <div class="video-call-action text-center pt-4 pb-2">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item avatar-sm fw-bold me-2">
+                                            <a href="javascript: void(0);" class="avatar-title rounded-circle bg-soft-light text-white fs-16">
+                                                <i class="bi bi-mic-mute"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item avatar fw-bold me-2">
+                                            <a href="javascript: void(0);" class="avatar-title rounded-circle bg-danger text-white fs-18">
+                                                <i class="bi bi-telephone" data-bs-dismiss="modal"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item avatar-sm fw-bold">
+                                            <a href="javascript: void(0);" class="avatar-title rounded-circle bg-soft-light text-white fs-16">
+                                                <i class="bi bi-camera-video"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> 
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- voice call modal -->
+                <div class="modal fade" id="voicecall" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-sm">
+                        <div class="modal-content voice-call">
+                            
+                            <div class="modal-header mt-5 justify-content-center">
+                                <div class="voice-call-head">
+                                    <img src="assets/images/users/avatar-2.jpg" class="rounded-circle" alt="Rhonda D"/>
+                                </div>
+                                
+                            </div>
+                           
+                            <div class="modal-body pt-0 text-center"> 
+                                <p class="mb-5">Calling...</p>                                  
+                                <div class="voice-call-action pt-4 pb-2">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item avatar-sm fw-bold me-2">
+                                            <a href="javascript: void(0);" class="avatar-title rounded-circle bg-soft-secondary text-dark fs-16">
+                                                <i class="bi bi-mic-mute"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item avatar fw-bold me-2" data-bs-dismiss="modal">
+                                            <a href="javascript: void(0);" class="avatar-title rounded-circle bg-danger text-white fs-18">
+                                                <i class="bi bi-telephone"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item avatar-sm fw-bold">
+                                            <a href="javascript: void(0);" class="avatar-title rounded-circle bg-soft-secondary text-dark fs-16">
+                                                <i class="bi bi-volume-up"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div> 
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>

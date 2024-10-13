@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include("partials/title-meta.html", {"title": "Kanban Board | Task Board"})
+
+		@@include('./partials/head-css.html')
+
+    </head>
+
+    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            @@include('./partials/topbar.html')
+
+            @@include('./partials/left-sidebar.html')
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <h4 class="page-title">Kanban Board</h4>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Shreyu</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tasks</a></li>
+                                            <li class="breadcrumb-item active">Kanban Board</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                        <!-- end page title -->  
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <label class="fw-bold d-inline-flex me-2">
+                                                    <i class="icon-dual icon-xs me-2" data-feather="hard-drive"></i>Project : 
+                                                </label>
+                                                <div class="dropdown d-inline-flex">
+                                                    <a class="fw-bold dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Shreyu Design
+                                                        <i class='uil uil-angle-down fs-16 align-middle'></i>
+                                                    </a>
+    
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="icon-dual icon-xs me-2" data-feather="hard-drive"></i>Shreyu Design</a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="icon-dual icon-xs me-2" data-feather="briefcase"></i>Development</a>
+                                                        <div class="dropdown-divider"></div>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="icon-dual icon-xs me-2" data-feather="folder-plus"></i>Shreyu Angular</a>
+                                                        <a class="dropdown-item" href="#">
+                                                            <i class="icon-dual icon-xs me-2" data-feather="folder-plus"></i>Shreyu React</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col text-end">
+                                                <button class="btn btn-primary" id="btn-new-event">
+                                                    <i class="uil-plus me-1"></i>Add New
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end card body-->
+                                </div> <!-- end card -->
+                            </div>
+                            <!-- end col-12 -->
+                        </div>
+    
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="board">
+                                    <div class="tasks border">
+                                        <h5 class="mt-0 task-header header-title">Todo <span class="fs-13">(3)</span>
+                                        </h5>
+    
+                                        <div id="task-list-one" class="task-list-items">
+                                            <!-- Task Item -->
+                                            <div class="card border mb-0">
+                                                <div class="card-body p-3">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle text-muted arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v fs-14"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-user-plus me-2"></i>Add People
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-warning">
+                                                                <i class="uil uil-exit me-2"></i>Leave
+                                                            </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                                <i class="uil uil-trash me-2"></i>Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-0 mb-2 fs-15">
+                                                        <a href="#" class="text-body">iOS App home page</a>
+                                                    </h6>
+    
+                                                    <span class="badge badge-soft-danger">High</span>
+    
+                                                    <p class="mb-0 mt-4">
+                                                        <img src="assets/images/users/avatar-5.jpg" alt="user-img" class="avatar-xs rounded-circle me-2" />
+    
+                                                        <span class="text-nowrap align-middle fs-13 me-2">
+                                                            <i class="uil uil-comments-alt text-muted me-1"></i>7
+                                                        </span>
+    
+                                                        <span class="text-nowrap align-middle fs-13">
+                                                            <i class="uil uil-check-square me-1 text-muted"></i>1/4
+                                                        </span>
+                                                        <small class="float-end text-muted">18 Jul 2019</small>
+                                                    </p>
+                                                </div> <!-- end card-body -->
+                                            </div>
+                                            <!-- Task Item End -->
+    
+                                            <!-- Task Item -->
+                                            <div class="card border mb-0">
+                                                <div class="card-body p-3">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle text-muted arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v fs-14"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                                                </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-user-plus me-2"></i>Add People
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-warning">
+                                                                <i class="uil uil-exit me-2"></i>Leave
+                                                            </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                                <i class="uil uil-trash me-2"></i>Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-0 mb-2 fs-15">
+                                                        <a href="#" class="text-body">Topnav layout design</a>
+                                                    </h6>
+    
+                                                    <span class="badge badge-soft-success">Low</span>
+    
+                                                    <p class="mb-0 mt-4">
+                                                        <img src="assets/images/users/avatar-6.jpg" alt="user-img" class="avatar-xs rounded-circle me-2" />
+    
+                                                        <span class="text-nowrap align-middle fs-13 me-2">
+                                                            <i class="uil uil-comments-alt text-muted me-1"></i>11
+                                                        </span>
+    
+                                                        <span class="text-nowrap align-middle fs-13">
+                                                            <i class="uil uil-check-square me-1 text-muted"></i>3/7
+                                                        </span>
+                                                        <small class="float-end text-muted">19 Jul 2019</small>
+                                                    </p>
+                                                </div> <!-- end card-body -->
+                                            </div>
+                                            <!-- Task Item End -->
+    
+                                            <!-- Task Item -->
+                                            <div class="card border mb-0">
+                                                <div class="card-body p-3">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle text-muted arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v fs-14"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-user-plus me-2"></i>Add People
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-warning">
+                                                                <i class="uil uil-exit me-2"></i>Leave</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                                <i class="uil uil-trash me-2"></i>Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-0 mb-2 fs-15">
+                                                        <a href="#" class="text-body">Invite Greeva to team</a>
+                                                    </h6>
+    
+                                                    <span class="badge badge-soft-warning">Medium</span>
+    
+                                                    <p class="mb-0 mt-4">
+                                                        <img src="assets/images/users/avatar-2.jpg" alt="user-img" class="avatar-xs rounded-circle me-2" />
+    
+                                                        <span class="text-nowrap align-middle fs-13 me-2">
+                                                            <i class="uil uil-comments-alt text-muted me-1"></i>10
+                                                        </span>
+    
+                                                        <span class="text-nowrap align-middle fs-13">
+                                                            <i class="uil uil-check-square me-1 text-muted"></i>1/1
+                                                        </span>
+                                                        <small class="float-end text-muted">14 Jul 2019</small>
+                                                    </p>
+                                                </div> <!-- end card-body -->
+                                            </div>
+                                            <!-- Task Item End -->
+                                        </div>
+                                    </div>
+    
+                                    <div class="tasks border">
+                                        <h5 class="mt-0 task-header header-title">In Progress <span class="fs-13">(2)</span>
+                                        </h5>
+                                        <div id="task-list-two" class="task-list-items">
+                                            <!-- Task Item -->
+                                            <div class="card border mb-0">
+                                                <div class="card-body p-3">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle text-muted arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v fs-14"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-user-plus me-2"></i>Add People
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-warning">
+                                                                <i class="uil uil-exit me-2"></i>Leave
+                                                            </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                                <i class="uil uil-trash me-2"></i>Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-0 mb-2 fs-15">
+                                                        <a href="#" class="text-body">Write a release note</a>
+                                                    </h6>
+    
+                                                    <span class="badge badge-soft-success">Low</span>
+    
+                                                    <p class="mb-0 mt-4">
+                                                        <img src="assets/images/users/avatar-2.jpg" alt="user-img" class="avatar-xs rounded-circle me-2" />
+    
+                                                        <span class="text-nowrap align-middle fs-13 me-2">
+                                                            <i class="uil uil-comments-alt text-muted me-1"></i>11
+                                                        </span>
+    
+                                                        <span class="text-nowrap align-middle fs-13">
+                                                            <i class="uil uil-check-square me-1 text-muted"></i>4/11
+                                                        </span>
+                                                        <small class="float-end text-muted">22 Jul 2019</small>
+                                                    </p>
+                                                </div> <!-- end card-body -->
+                                            </div>
+                                            <!-- Task Item End -->
+    
+                                            <!-- Task Item -->
+                                            <div class="card border mb-0">
+                                                <div class="card-body p-3">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle text-muted arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v fs-14"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-user-plus me-2"></i>Add People
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-warning">
+                                                                <i class="uil uil-exit me-2"></i>Leave
+                                                            </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                                <i class="uil uil-trash me-2"></i>Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-0 mb-2 fs-15">
+                                                        <a href="#" class="text-body">Enable analytics tracking</a>
+                                                    </h6>
+    
+                                                    <span class="badge badge-soft-info">Normal</span>
+    
+                                                    <p class="mb-0 mt-4">
+                                                        <img src="assets/images/users/avatar-7.jpg" alt="user-img" class="avatar-xs rounded-circle me-2" />
+    
+                                                        <span class="text-nowrap align-middle fs-13 me-2">
+                                                            <i class="uil uil-comments-alt text-muted me-1"></i>2
+                                                        </span>
+    
+                                                        <span class="text-nowrap align-middle fs-13">
+                                                            <i class="uil uil-check-square me-1 text-muted"></i>1/3
+                                                        </span>
+                                                        <small class="float-end text-muted">21 Jul 2019</small>
+                                                    </p>
+                                                </div> <!-- end card-body -->
+                                            </div>
+                                            <!-- Task Item End -->
+                                        </div>
+                                    </div>
+    
+                                    <div class="tasks border">
+                                        <h5 class="mt-0 task-header header-title">Review <span class="fs-13">(2)</span>
+                                        </h5>
+                                        <div id="task-list-three" class="task-list-items">
+                                            <!-- Task Item -->
+                                            <div class="card border mb-0">
+                                                <div class="card-body p-3">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle text-muted arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v fs-14"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-user-plus me-2"></i>Add People
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-warning">
+                                                                <i class="uil uil-exit me-2"></i>Leave</a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                                <i class="uil uil-trash me-2"></i>Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-0 mb-2 fs-15">
+                                                        <a href="#" class="text-body">Kanban board design</a>
+                                                    </h6>
+    
+                                                    <span class="badge badge-soft-danger">High</span>
+    
+                                                    <p class="mb-0 mt-4">
+                                                        <img src="assets/images/users/avatar-3.jpg" alt="user-img" class="avatar-xs rounded-circle me-2" />
+    
+                                                        <span class="text-nowrap align-middle fs-13 me-2">
+                                                            <i class="uil uil-comments-alt text-muted me-1"></i>101
+                                                        </span>
+    
+                                                        <span class="text-nowrap align-middle fs-13">
+                                                            <i class="uil uil-check-square me-1 text-muted"></i>11/32
+                                                        </span>
+                                                        <small class="float-end text-muted">22 Jul 2019</small>
+                                                    </p>
+                                                </div> <!-- end card-body -->
+                                            </div>
+                                            <!-- Task Item End -->
+    
+                                            <!-- Task Item -->
+                                            <div class="card border mb-0">
+                                                <div class="card-body p-3">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle text-muted arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v fs-14"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-user-plus me-2"></i>Add People
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-warning">
+                                                                <i class="uil uil-exit me-2"></i>Leave
+                                                            </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                                <i class="uil uil-trash me-2"></i>Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-0 mb-2 fs-15">
+                                                        <a href="#" class="text-body">Implement HTML email template</a>
+                                                    </h6>
+    
+                                                    <span class="badge badge-soft-info">Normal</span>
+    
+                                                    <p class="mb-0 mt-4">
+                                                        <img src="assets/images/users/avatar-4.jpg" alt="user-img" class="avatar-xs rounded-circle me-2" />
+    
+                                                        <span class="text-nowrap align-middle fs-13 me-2">
+                                                            <i class="uil uil-comments-alt text-muted me-1"></i>14
+                                                        </span>
+    
+                                                        <span class="text-nowrap align-middle fs-13">
+                                                            <i class="uil uil-check-square me-1 text-muted"></i>3/5
+                                                        </span>
+                                                        <small class="float-end text-muted">19 Jul 2019</small>
+                                                    </p>
+                                                </div> <!-- end card-body -->
+                                            </div>
+                                            <!-- Task Item End -->
+                                        </div>
+                                    </div>
+    
+                                    <div class="tasks border">
+                                        <h5 class="mt-0 task-header header-title">Done <span class="fs-13">(1)</span>
+                                        </h5>
+                                        <div id="task-list-four" class="task-list-items">
+                                            <!-- Task Item -->
+                                            <div class="card border mb-0">
+                                                <div class="card-body p-3">
+                                                    <div class="dropdown float-end">
+                                                        <a href="#" class="dropdown-toggle text-muted arrow-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="uil uil-ellipsis-v fs-14"></i>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-edit-alt me-2"></i>Edit
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item">
+                                                                <i class="uil uil-user-plus me-2"></i>Add People
+                                                            </a>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-warning">
+                                                                <i class="uil uil-exit me-2"></i>Leave
+                                                            </a>
+                                                            <div class="dropdown-divider"></div>
+                                                            <!-- item-->
+                                                            <a href="javascript:void(0);" class="dropdown-item text-danger">
+                                                                <i class="uil uil-trash me-2"></i>Delete
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <h6 class="mt-0 mb-2 fs-15">
+                                                        <a href="#" class="text-body">Dashboard design</a>
+                                                    </h6>
+    
+                                                    <span class="badge badge-soft-danger">High</span>
+    
+                                                    <p class="mb-0 mt-4">
+                                                        <img src="assets/images/users/avatar-7.jpg" alt="user-img" class="avatar-xs rounded-circle me-2" />
+    
+                                                        <span class="text-nowrap align-middle fs-13 me-2">
+                                                            <i class="uil uil-comments-alt text-muted me-1"></i>121
+                                                        </span>
+    
+                                                        <span class="text-nowrap align-middle fs-13">
+                                                            <i class="uil uil-check-square me-1 text-muted"></i>24/24
+                                                        </span>
+                                                        <small class="float-end text-muted">21 Jul 2019</small>
+                                                    </p>
+                                                </div> <!-- end card-body -->
+                                            </div>
+                                            <!-- Task Item End -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                @@include('./partials/footer.html')
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        @@include('./partials/right-sidebar.html')
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <!-- dragula js-->
+        <script src="assets/libs/sortablejs/Sortable.min.js"></script>
+        <script src="assets/js/pages/kanban.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+        
+    </body>
+</html>
